@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SentinelX Dashboard</title>
+</head>
+<body>
+   <h1>SentinelX Dashboard</h1> 
+
+   <table border="1">
+    <tr>
+        <th>ID</th>
+        <th>IP ADDRESS</th>
+        <th>Endpoint</th>
+        <th>Status code</th>
+        <th>Timestamp</th>
+    </tr>
+    {% for log in logs %}
+    <tr>
+        <td>{{log.id}}</td>
+        <td>{{log.ip_address}}</td>
+        <td>{{log.endpoint}}</td>
+        <td>{{log.status_code}}</td>
+        <td>{{log.timestamp}}</td>
+    </tr>
+    {% endfor%}
+   </table>
+</body>
+</html>

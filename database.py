@@ -1,7 +1,6 @@
 import sqlite3
 
 DB_NAME="sentinelx.db"
-
 def get_connection():
     conn=sqlite3.connect(DB_NAME)
     conn.row_factory=sqlite3.Row
@@ -16,6 +15,7 @@ def create_logs_table():
                    id INTEGER PRIMARY KEY AUTOINCREMENT,
                    ip_address TEXT,
                    endpoint TEXT,
+                   status_code INTEGER,
                    timestamp TEXT
                    )
                    """)
