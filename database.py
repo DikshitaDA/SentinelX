@@ -7,7 +7,7 @@ def get_connection():
     conn.row_factory=sqlite3.Row
     return conn
 
-def crate_logs_table():
+def create_logs_table():
     conn=get_connection()
     cursor=conn.cursor()
 
