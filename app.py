@@ -6,5 +6,5 @@ app=Flask(__name__)
 def home():
     return "SentinLX is running"
 
-if __name__ == "__main __":
+if __name__ == "__main__":
     app.run(debug=True)
